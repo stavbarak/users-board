@@ -1,0 +1,30 @@
+{
+  "users": [
+    {
+      "id": "15",
+      "firstName": "Johny",
+      "lastName": "Rotten",
+      "age": 30,
+      "companyId": "1"
+    },
+    {
+      "id": "16",
+      "firstName": "Grace",
+      "lastName": "Slick",
+      "age": 40,
+      "companyId": "2"
+    }
+  ],
+  "companies": [
+    {
+      "id": "1",
+      "name": "Tikal",
+      "location": "Tel Aviv, Israel"
+    },
+    {
+      "id": "2",
+      "name": "Google",
+      "location": "Tel Aviv, Israel"
+    }
+  ]
+}
