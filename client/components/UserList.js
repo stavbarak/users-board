@@ -1,43 +1,25 @@
-import React, { Component, useState, useEffect } from 'react';
-import gql from 'graphql-tag';
-import { graphql } from 'react-apollo';
+import React from 'react';
+import { useQuery } from '@apollo/react-hooks';
+import fetchUsers from '../queries/fetchUsers';
 
-class UserList extends Component {
+const UserList = () => {
 
-    renderUsers() {
-        const { data } = this.props;
+    const { data, loading } = useQuery(fetchUsers);
+    const renderUsers = () => {
         const { users } = data;
         return users.map(user => {
             return (
                 <li key={user.id}>
-                    {user.firstMame}
+                    {user.firstName}
                 </li>
             )
         })
+    }
 
-    }
-    render() {
-        const { data } = this.props;
-        const { loading } = data;
-        if (loading) return <div>Loading</div>
+    if (loading) return <div>Loading</div>
         return (
-            <ul>{this.renderUsers()}</ul>
+            <ul>{renderUsers()}</ul>
         )
-    }
 }
 
-const query = gql`
-{
-    users {
-      id
-      firstName
-    }
-  }
-`;
-
-
-export default graphql(query, {
-    options: { fetchPolicy: 'no-cache', returnPartialData: true },
-  })(UserList);
-
-//export default graphql(query)(UserList);
+export default UserList;
