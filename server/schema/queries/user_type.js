@@ -13,6 +13,7 @@ const UserType = new GraphQLObjectType({
       firstName: { type: GraphQLString },
       lastName: { type: GraphQLString },
       age: { type: GraphQLInt },
+      position: { type: GraphQLString },
       company: {
         type: require('./company_type'),
         resolve(parentValue, args) {

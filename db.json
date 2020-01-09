@@ -2,29 +2,100 @@
   "users": [
     {
       "id": "15",
-      "firstName": "Johny",
-      "lastName": "Rotten",
+      "firstName": "Donald",
+      "lastName": "Bump",
       "age": 30,
-      "companyId": "1"
+      "position": "Product Manager",
+      "companyId": "1",
+      "connectionIds": ["16", "17"]
     },
     {
       "id": "16",
-      "firstName": "Grace",
-      "lastName": "Slick",
+      "firstName": "Sefi",
+      "lastName": "The Cat",
       "age": 40,
+      "position": "CEO",
       "companyId": "2"
+    },
+    {
+      "id": "17",
+      "firstName": "Sarha",
+      "lastName": "Taylor",
+      "age": 25,
+      "position": "DevOps",
+      "companyId": "3"
+    },
+    {
+      "id": "18",
+      "firstName": "Carie",
+      "lastName": "Doyle",
+      "age": 43,
+      "position": "Frontend Developer",
+      "companyId": "4"
+    },
+    {
+      "id": "19",
+      "firstName": "Adam",
+      "lastName": "Passanger",
+      "age": 24,
+      "position": "Fullstack Developer",
+      "companyId": "5"
+    },
+    {
+      "id": "20",
+      "firstName": "Brian",
+      "lastName": "Harris",
+      "age": 34,
+      "position": "Backend Developer",
+      "companyId": "6"
+    },
+    {
+      "id": "21",
+      "firstName": "Stav",
+      "lastName": "Barak",
+      "age": 34,
+      "position": "Fullstack Developer",
+      "companyId": "2"
+    },
+    {
+      "id": "22",
+      "firstName": "Baby",
+      "lastName": "Shark",
+      "age": 34,
+      "position": "Fullstack Developer",
+      "companyId": "1"
     }
   ],
   "companies": [
     {
       "id": "1",
-      "name": "Tikal",
-      "location": "Tel Aviv, Israel"
+      "name": "Facenote",
+      "location": "New York, New York"
     },
     {
       "id": "2",
-      "name": "Google",
+      "name": "Cats.io",
       "location": "Tel Aviv, Israel"
+    },
+    {
+      "id": "3",
+      "name": "Glitter",
+      "location": "London, UK"
+    },
+    {
+      "id": "4",
+      "name": "Cloo",
+      "location": "Berlin, Germany"
+    },
+    {
+      "id": "5",
+      "name": "Earthwalker",
+      "location": "Los Angeles, California"
+    },
+    {
+      "id": "6",
+      "name": "Joongle",
+      "location": "Sydney, Australia"
     }
   ]
 }

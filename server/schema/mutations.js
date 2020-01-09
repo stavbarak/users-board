@@ -18,7 +18,8 @@ const mutation = new GraphQLObjectType({
         args: {
           firstName: { type: new GraphQLNonNull(GraphQLString) },
           age: { type: GraphQLInt },
-          companyId: { type: GraphQLString }
+          companyId: { type: GraphQLString },
+          position: { type: GraphQLString }
         },
         resolve(parentValue, { firstName, age, companyId }) {
           return axios.post('http://localhost:3000/users', { firstName, age, companyId })
