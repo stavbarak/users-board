@@ -8,6 +8,7 @@ import { Router, Route, browserHistory, IndexRoute } from 'react-router';
 
 import App from './components/App';
 import UserList from './components/UserList';
+import CreateUser from './components/CreateUser';
 
 const cache = new InMemoryCache();
 
@@ -24,6 +25,7 @@ const Root = () => {
             <Router history={browserHistory}>
                 <Route path="/" component={App}>
                   <IndexRoute component={UserList} />
+                  <Route path="users/new" component={CreateUser} />
                 </Route>
             </Router>
         </ApolloProvider>

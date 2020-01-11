@@ -6,8 +6,7 @@
       "lastName": "Bump",
       "age": 30,
       "position": "Product Manager",
-      "companyId": "1",
-      "connectionIds": ["16", "17"]
+      "companyId": "1"
     },
     {
       "id": "16",
