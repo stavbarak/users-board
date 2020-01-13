@@ -10,6 +10,9 @@ const UserType = require('./user_type');
 
 const CompanyType = new GraphQLObjectType({
   name: 'Company',
+  // There is a circular referencing between the user and the company,
+  // therefor the fields object is wrapped in an arrow function that returns an object.
+  // this way the user type is inside the closure scope of this function and we don't get errors
   fields: () => ({
     id: { type: GraphQLString },
     name: { type: GraphQLString },
