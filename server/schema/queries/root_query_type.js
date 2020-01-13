@@ -14,7 +14,11 @@ const RootQueryType = new GraphQLObjectType({
   fields: () => ({
     user: {
       type: UserType,
+      // give the root query an id to get back the user
       args: { id: { type: GraphQLString } },
+      // the resolve funtion is where we actually go into the database and find what we're looking for.
+      // parentValue - only used in nested query types
+      // args - gets called with the arguments that were passed into the original query.
       resolve(parentValue, args) {
         return axios.get(`http://localhost:3000/users/${args.id}`)
           .then(resp => resp.data);
